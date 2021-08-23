@@ -1,0 +1,83 @@
+<div class="container">
+  <input type="radio" name="slider" id="item-1">
+  <input type="radio" name="slider" id="item-2" checked>
+  <input type="radio" name="slider" id="item-3">
+
+  <button mat-fab class="carousel-left-button" (click)="clickLeft()">
+    <mat-icon>arrow_back_ios</mat-icon>
+  </button>
+  <div
+    class="cards"
+  >
+    <label
+      class="card "
+      for="item-1"
+      id="card-1"
+    >
+      <img [src]="leftCard.cardImageUrl">
+
+      <div class="card-text-container">
+        <h1>{{ leftCard.cardTitle }}</h1>
+        <div class="card-text-container-text">
+          {{ leftCard.cardDescription }}
+
+          <div class="button-container">
+            <ng-container
+              *ngFor="let cardButton of leftCard.cardButtons"
+            >
+              <button mat-button (click)="navigate(cardButton.text, cardButton.link)">{{ cardButton.text }}</button>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </label>
+
+    <label
+      class="card card-center"
+      for="item-2"
+      id="card-2"
+    >
+      <img [src]="centerCard.cardImageUrl">
+      <div class="card-text-container">
+        <h1>{{ centerCard.cardTitle }}</h1>
+        <div class="card-text-container-text">
+          {{ centerCard.cardDescription }}
+
+          <div class="button-container">
+            <ng-container
+              *ngFor="let cardButton of centerCard.cardButtons"
+            >
+              <button mat-button (click)="navigate(cardButton.text, cardButton.link)">{{ cardButton.text }}</button>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </label>
+
+    <label
+      class="card card-right"
+      for="item-3"
+      id="card-3"
+    >
+      <img [src]="rightCard.cardImageUrl">
+
+      <div class="card-text-container">
+        <h1>{{ rightCard.cardTitle }}</h1>
+        <div class="card-text-container-text">
+          {{ rightCard.cardDescription }}
+
+          <div class="button-container">
+            <ng-container
+              *ngFor="let cardButton of rightCard.cardButtons"
+            >
+              <button mat-button (click)="navigate(cardButton.text, cardButton.link)">{{ cardButton.text }}</button>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+  <button mat-fab class="carousel-right-button" (click)="clickRight()">
+    <mat-icon>arrow_forward_ios</mat-icon>
+  </button>
+</div>

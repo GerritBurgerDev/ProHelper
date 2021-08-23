@@ -1,0 +1,46 @@
+.nav {
+  position: fixed;
+  top: 0;
+  background: var(--gray);
+  color: rgba(var(--white));
+  z-index: 100;
+  box-shadow: 2px 2px 4px 5px rgba(0, 0, 0, 0.7);
+
+  .pokeball-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .title {
+    margin-left: 10px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .nav-text {
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-right: 30px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--red);
+    }
+  }
+
+  .menu-button {
+    background: rgba(0, 0, 0, 0) !important;
+  }
+
+  .menu-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 1.2s ease-in-out;
+
+    &:hover {
+      transform: rotate(-1800deg);
+    }
+  }
+}

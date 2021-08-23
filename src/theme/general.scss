@@ -1,0 +1,40 @@
+@import "colors.scss";
+
+// LINKS
+
+a {
+  color: var(--blue);
+  transition: transform .4s ease-in-out;
+
+  &:visited {
+    color: var(--blue-darker)
+  }
+
+  &:hover {
+    color: var(--blue-lighter);
+    transform: rotate(90deg);
+  }
+}
+
+// TYPOGRAPHY
+
+span {
+  font-weight: 100;
+}
+
+p {
+  font-weight: 100;
+}
+
+// BUTTONS
+
+button {
+  background: var(--red-lighter) !important;
+  color: white !important;
+  box-shadow: 0 0 8px 1px rgba(var(--gray-darker), 0.6);
+  transition: transform .5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
